@@ -16,8 +16,7 @@ if st.button("Generate") :
 		music_pattern = np.append(music_pattern,pred_index)
 		music_pattern = music_pattern[1:]
 	output_notes = []
-   	for offset,pattern in enumerate(out_pred):
-		#if pattern is a chord instance
+	for offset,pattern in enumerate(out_pred):
 		if ('.' in pattern) or pattern.isdigit():
 			#split notes from the chord
            		notes_in_chord = pattern.split('.')
