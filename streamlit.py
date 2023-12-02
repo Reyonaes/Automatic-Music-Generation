@@ -1,3 +1,4 @@
+import music21
 from music21 import *
 import glob
 import numpy as np
