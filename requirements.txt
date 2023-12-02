@@ -7,4 +7,3 @@ tensorflow
 keras
 tqdm
 numpy
-pickle
