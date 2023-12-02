@@ -9,10 +9,13 @@ import tensorflow
 from tensorflow import keras
 st.title("Automatic Music Generation")
 st.markdown("Classical music in Bach style")
+notes=['A','B','C','D','E','F','G']
 str=st.text_input("Enter a musical note (Letters A to G)").upper()
 musical_note=[]
-for char in str :
-	musical_note.append(char)
+for j in str :
+	 for i,char in notes:
+		if char==j :
+			musical_note.append(i)
 model2=keras.models.load_model("Classical_Bach.h5")
 if st.button("Generate") :
 	music_pattern = np.array(musical_note)
