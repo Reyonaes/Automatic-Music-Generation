@@ -1,10 +1,9 @@
-pip install
+music21
 scikit-learn
 pandas
 joblib
 tensorflow
 keras
-music21
 glob
 tqdm
 numpy
