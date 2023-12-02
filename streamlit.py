@@ -8,8 +8,8 @@ import streamlit as st
 import tensorflow
 from tensorflow import keras
 import midi2audio
-from midi2audio import FluidSynth
-fs=FluidSynth()
+#from midi2audio import FluidSynth
+#fs=FluidSynth()
 timesteps=6
 import pickle
 with open('Dict1.pkl', 'rb') as fp:
