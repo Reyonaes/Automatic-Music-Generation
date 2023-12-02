@@ -8,8 +8,8 @@ import streamlit as st
 import tensorflow
 from tensorflow import keras
 import midi2audio
-#from midi2audio import FluidSynth
-#fs=FluidSynth()
+from midi2audio import FluidSynth
+fs=FluidSynth()
 timesteps=6
 import pickle
 with open('Dict1.pkl', 'rb') as fp:
@@ -52,5 +52,5 @@ if st.button("Generate") :
 	#save the midi file
 	midi_stream = stream.Stream(output_notes)
 	midi_stream.write('midi', fp='pred_music2.mid')
-	#fs.midi_to_audio('pred_music2.mid', 'pred3.wav')
-	st.audio('pred_music1.mid',format="mid")
+	fs.midi_to_audio('pred_music2.mid', 'pred3.wav')
+	st.audio('pred3.wav',format='wav', start_time=0)
