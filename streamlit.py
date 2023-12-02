@@ -26,14 +26,13 @@ if st.button("Generate") :
 				new_note.storedInstrument = instrument.Piano()
 				notes.append(new_note)
 			new_chord = chord.Chord(notes)
-           		new_chord.offset = offset
-           		output_notes.append(new_chord)
+			new_chord.offset = offset
+			output_notes.append(new_chord)
 		else:
-			#cast the pattern to Note object apply the offset and append the note
-           		new_note = note.Note(pattern)
-           		new_note.offset = offset
-           		new_note.storedInstrument = instrument.Piano()
-           		output_notes.append(new_note)
+			new_note = note.Note(pattern)
+			new_note.offset = offset
+			new_note.storedInstrument = instrument.Piano()
+			output_notes.append(new_note)
 	#save the midi file
 	midi_stream = stream.Stream(output_notes)
 	midi_stream.write('midi', fp='pred_music2.mid')
