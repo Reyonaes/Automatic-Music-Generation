@@ -1,3 +1,8 @@
 joblib
 tensorflow
 keras
+music21
+glob
+tqdm
+numpy
+random
