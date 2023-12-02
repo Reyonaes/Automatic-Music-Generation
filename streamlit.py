@@ -18,7 +18,7 @@ df=pd.read_csv("Bach_dataframe.csv")
 x=df.iloc[:,:-1]
 x_new=np.array(x)
 x_new = np.reshape(x_new,(len(x_new),timesteps,1))
-music_pattern=x[index]
+music_pattern=x_new[index]
 model2=keras.models.load_model("Classical_Bach.h5")
 if st.button("Generate") :
 	out_pred=[]
