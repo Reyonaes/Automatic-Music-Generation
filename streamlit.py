@@ -10,7 +10,7 @@ from tensorflow import keras
 st.title("Automatic Music Generation")
 st.markdown("LSTM model which creates classical music by inputing a random number")
 n=st.number_input("Enter a random number from 0 to 37")
-model2=keras.models.load_model("Classical_Bach.keras")
+model2=keras.models.load_model("Classical_Bach.h5")
 if st.button("Generate") :
 	music_pattern = x_test[n]
 	out_pred=[]
