@@ -31,6 +31,7 @@ file_path=["bach"]
 all_files=glob.glob("bach\*.mid",recursive=True)
 # Reading each midi file
 #notes_array = np.array([read_files(i) for i in tqdm(all_files,position=0,leave=True)])
+notes=[]
 for i in tqdm(all_files, position=0, leave=True) :
     notes=read_files(i)
 notes_array = np.array(notes)
