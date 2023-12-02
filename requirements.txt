@@ -1,4 +1,5 @@
 music21
+streamlit
 scikit-learn
 pandas
 joblib
@@ -8,4 +9,3 @@ glob
 tqdm
 numpy
 random
-streamlit
