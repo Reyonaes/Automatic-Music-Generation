@@ -12,7 +12,7 @@ if st.button("Generate") :
 	for i in range(200):
 		music_pattern = music_pattern.reshape(1,len(music_pattern),1)
 		pred_index = np.argmax(model2.predict(music_pattern))
-       		out_pred.append(ind2note[pred_index])
+		out_pred.append(ind2note[pred_index])
 		music_pattern = np.append(music_pattern,pred_index)
 		music_pattern = music_pattern[1:]
 	output_notes = []
