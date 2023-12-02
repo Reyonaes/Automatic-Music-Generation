@@ -12,13 +12,10 @@ st.markdown("Classical music in Bach style")
 musical_note=st.text_input("Enter a musical note (Letters A to G)").upper()
 model2=keras.models.load_model("Classical_Bach.h5")
 if st.button("Generate") :
-	music_pattern = np.array([musical_note])
+	music_pattern = np.array([musical_note * 6])
 	out_pred=[]
 	for i in range(200):
-		if len(music_pattern)<6 :
-			music_pattern = music_pattern.reshape(1,6,1)
-		else :
-			music_pattern = music_pattern.reshape(1,len(music_pattern),1)
+		music_pattern = music_pattern.reshape(1,len(music_pattern),1)
 		pred_index = np.argmax(model2.predict(music_pattern))
 		out_pred.append(ind2note[pred_index])
 		music_pattern = np.append(music_pattern,pred_index)
