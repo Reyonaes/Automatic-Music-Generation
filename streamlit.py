@@ -11,11 +11,10 @@ if st.button("Generate") :
 	out_pred=[]
 	for i in range(200):
 		music_pattern = music_pattern.reshape(1,len(music_pattern),1)
-		#get the maximum probability value from the predicted output
 		pred_index = np.argmax(model2.predict(music_pattern))
        		#get the note using predicted index and append to the output prediction list
-       		out_pred.append(ind2note[pred_index])
-       		music_pattern = np.append(music_pattern,pred_index)
+		out_pred.append(ind2note[pred_index])
+		music_pattern = np.append(music_pattern,pred_index)
        		#update the music pattern with one timestep ahead
        		music_pattern = music_pattern[1:]
    	output_notes = []
