@@ -22,13 +22,10 @@ if st.button("Generate") :
 			notes = []
 			for current_note in notes_in_chord:
 				i_curr_note=int(current_note)
-               			#cast the current note to Note object and append the current note 
-               			new_note = note.Note(i_curr_note)
-               			new_note.storedInstrument = instrument.Piano()
-               			notes.append(new_note)
-			#cast the current note to Chord object and offset will be 1 step ahead from the previous note
-           		#as it will prevent notes to stack up 
-           		new_chord = chord.Chord(notes)
+				new_note = note.Note(i_curr_note)
+				new_note.storedInstrument = instrument.Piano()
+				notes.append(new_note)
+			new_chord = chord.Chord(notes)
            		new_chord.offset = offset
            		output_notes.append(new_chord)
 		else:
