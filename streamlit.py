@@ -53,4 +53,4 @@ if st.button("Generate") :
 	midi_stream = stream.Stream(output_notes)
 	midi_stream.write('midi', fp='pred_music2.mid')
 	#fs.midi_to_audio('pred_music2.mid', 'pred3.wav')
-	st.audio('pred_music1.mid')
+	st.audio('pred_music1.mid',format="mid")
