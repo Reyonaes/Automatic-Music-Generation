@@ -18,10 +18,9 @@ if st.button("Generate") :
 	output_notes = []
 	for offset,pattern in enumerate(out_pred):
 		if ('.' in pattern) or pattern.isdigit():
-			#split notes from the chord
-           		notes_in_chord = pattern.split('.')
+			notes_in_chord = pattern.split('.')
            		notes = []
-           		for current_note in notes_in_chord:
+			for current_note in notes_in_chord:
 				i_curr_note=int(current_note)
                			#cast the current note to Note object and append the current note 
                			new_note = note.Note(i_curr_note)
