@@ -8,3 +8,4 @@ keras
 tqdm
 numpy
 midi2audio
+FluidSynth
