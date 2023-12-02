@@ -8,11 +8,11 @@ import streamlit as st
 import tensorflow
 from tensorflow import keras
 st.title("Automatic Music Generation")
-st.markdown("LSTM model which creates classical music by inputing a random number")
-n=int(st.number_input("Enter a random number from 0 to 37"))
+st.markdown("Enter a musical note (Letters A to G")
+musical_note=st.text_input("Enter a random number from 0 to 37").upper()
 model2=keras.models.load_model("Classical_Bach.h5")
 if st.button("Generate") :
-	music_pattern = x_test[n]
+	music_pattern = musical_note
 	out_pred=[]
 	for i in range(200):
 		music_pattern = music_pattern.reshape(1,len(music_pattern),1)
