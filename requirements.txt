@@ -5,7 +5,6 @@ pandas
 joblib
 tensorflow
 keras
-glob
 tqdm
 numpy
 random
