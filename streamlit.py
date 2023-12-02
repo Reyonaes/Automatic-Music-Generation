@@ -19,7 +19,7 @@ if st.button("Generate") :
 	for offset,pattern in enumerate(out_pred):
 		if ('.' in pattern) or pattern.isdigit():
 			notes_in_chord = pattern.split('.')
-           		notes = []
+			notes = []
 			for current_note in notes_in_chord:
 				i_curr_note=int(current_note)
                			#cast the current note to Note object and append the current note 
