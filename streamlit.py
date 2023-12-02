@@ -13,7 +13,7 @@ index=int(st.number_input("Enter a random number from 0 to 185"))
 df=pd.read_csv("Bach_dataframe.csv")
 x=df.iloc[:,:-1]
 x=np.array(x)
-x= np.reshape(x,(len(x_new),timesteps,1))
+x= np.reshape(x,(len(x),timesteps,1))
 music_pattern=x[index]
 model2=keras.models.load_model("Classical_Bach.h5")
 if st.button("Generate") :
