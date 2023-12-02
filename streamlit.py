@@ -8,8 +8,8 @@ n=st.number_input("Enter a random number from 0 to 37")
 model2=keras.load_model("Classical_Bach")
 if st.button("Generate") :
 	music_pattern = x_test[n]
-   	out_pred=[]
-   	for i in range(200):
+	out_pred=[]
+	for i in range(200):
       		# Reshape the music pattern
        		music_pattern = music_pattern.reshape(1,len(music_pattern),1)
        		#get the maximum probability value from the predicted output
