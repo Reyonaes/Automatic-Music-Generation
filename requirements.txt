@@ -7,3 +7,4 @@ tensorflow
 keras
 tqdm
 numpy
+midi2audio
