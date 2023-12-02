@@ -8,8 +8,8 @@ import streamlit as st
 import tensorflow
 from tensorflow import keras
 st.title("Automatic Music Generation")
-st.markdown("Enter a musical note (Letters A to G")
-musical_note=st.text_input("Enter a random number from 0 to 37").upper()
+st.markdown("Classical music in Bach style")
+musical_note=st.text_input("Enter a musical note (Letters A to G)7").upper()
 model2=keras.models.load_model("Classical_Bach.h5")
 if st.button("Generate") :
 	music_pattern = musical_note
