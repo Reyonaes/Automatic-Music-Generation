@@ -14,7 +14,8 @@ musical_note=st.text_input("Enter a musical note (Letters A to G)").upper()
 pattern=[]
 for i, ele in enumerate(unique_notes) :
 	 if musical_note in ele :
-		 pattern=unique_notes[i : i+6]
+		 for j in range(6) :
+			 pattern.append(i+j)
 model2=keras.models.load_model("Classical_Bach.h5")
 if st.button("Generate") :
 	music_pattern = np.array(pattern)
