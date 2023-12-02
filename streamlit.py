@@ -7,6 +7,10 @@ import joblib
 import streamlit as st
 import tensorflow
 from tensorflow import keras
+timesteps=6
+import pickle
+with open('Dict1.pkl', 'rb') as fp:
+    ind2note = pickle.load(fp)
 st.title("Automatic Music Generation")
 st.markdown("Classical music in Bach style")
 index=int(st.number_input("Enter a random number from 0 to 185"))
