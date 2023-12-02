@@ -28,7 +28,7 @@ def read_files(file) :
     return notes
 # Retrieve the paths directly from inside the directories / files
 file_path=["bach"]
-all_files=glob.glob(r"C:\Users\Ryona Elza Sabu\Desktop\BE AI - 3rd Year\NNDL\Automatic Music Generation\Classical Music\\"+file_path[0]+ "\*.mid",recursive=True)
+all_files=glob.glob("bach\*.mid",recursive=True)
 # Reading each midi file
 #notes_array = np.array([read_files(i) for i in tqdm(all_files,position=0,leave=True)])
 for i in tqdm(all_files, position=0, leave=True) :
