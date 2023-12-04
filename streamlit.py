@@ -58,7 +58,7 @@ if st.button("Generate") :
   		in:  midi file
     		out: href string"""
 		# val looks like b'...'
-		return f'<a href="data:application/octet-stream;{mid}" download="example.mid">Download midi file with save as</a>' 
+		return f'<a href="data:application/octet-stream;{mid}" download="pred_music2.mid">Download midi file with save as</a>' 
 	with open("pred_music2.mid", 'rb') as inmidi:
 		st.markdown(get_midi_download_link(inmidi), unsafe_allow_html=True)
 	#st.audio('pred_music1.mp3',start_time=0)
