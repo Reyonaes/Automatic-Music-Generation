@@ -12,7 +12,7 @@ import midi2audio
 #fs=FluidSynth()
 timesteps=6
 import pickle
-with open('Dict1.pkl', 'rb') as fp:
+with open('Dict2.pkl', 'rb') as fp:
     ind2note = pickle.load(fp)
 st.title("Automatic Music Generation")
 st.markdown("Classical music in Bach and Beethoven style")
@@ -22,7 +22,7 @@ x_new=np.array(x)
 x_new = np.reshape(x_new,(len(x_new),timesteps,1))
 index=np.random.randint(0,len(x_new)-1)
 music_pattern=x_new[index]
-model2=keras.models.load_model("Classical_Bach.h5")
+model2=keras.models.load_model("Classical_Bach&Beeth.h5")
 if st.button("Generate") :
 	out_pred=[]
 	for i in range(200):
