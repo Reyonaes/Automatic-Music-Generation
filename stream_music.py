@@ -51,7 +51,7 @@ if st.button("Generate") :
 			output_notes.append(new_note)
 	#save the midi file
 	midi_stream = stream.Stream(output_notes)
-	midi_stream.write('midi', fp='pred_music2.mid')
+	midi_stream.write('midi', fp='pred_music3.mid')
 	with open('pred_music2.mid', 'rb') as f:
-		st.download_button('Download Midi File', f, file_name='pred_music3.mid')
+		st.download_button('Download Midi File', f, file_name='pred_music4.mid')
 	#st.audio('pred_music1.mp3',start_time=0)
