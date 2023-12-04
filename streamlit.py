@@ -52,13 +52,6 @@ if st.button("Generate") :
 	#save the midi file
 	midi_stream = stream.Stream(output_notes)
 	midi_stream.write('midi', fp='pred_music2.mid')
-	import base64
-	def get_midi_download_link(mid):
-		"""Generates a link allowing the data in a given midi file to be downloaded
-  		in:  midi file
-    		out: href string"""
-		# val looks like b'...'
-		return f'<a href="data:application/octet-stream;{mid}" download="pred_music2.mid">Download midi file with save as</a>' 
-	with open("pred_music2.mid", 'rb') as inmidi:
-		st.markdown(get_midi_download_link(inmidi), unsafe_allow_html=True)
+	with open('pred_music2.mid', 'rb') as f:
+		st.download_button('Download Midi File', f, file_name='pred_music3.mid')
 	#st.audio('pred_music1.mp3',start_time=0)
